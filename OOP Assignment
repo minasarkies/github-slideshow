@@ -1,0 +1,62 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main()
+{
+    bool a,b,res,res2;
+    int mode,c,d;
+  
+        cout <<"enter the operation required(1:and, 2:or, 3:compare, 4:not  ) :" <<endl;
+        cin >> mode;
+    
+        cout <<"enter the boolean values one after the other (1:true, 2:false): " <<endl;
+        cin >> c >> d;
+        
+        if (c == 1)
+            a = true;
+        else if (c == 2)
+            a = false;
+        else
+        {
+            cout << "Error: input invalid";
+            exit (EXIT_FAILURE);
+        }
+        
+        if (d == 1)
+            b = true;
+        else if (d == 2)
+            b = false;
+        else
+        {
+            cout << "Error: input invalid";
+            exit (EXIT_FAILURE);
+        }
+        if(mode == 1)
+            res = a && b;
+        else if(mode == 2)
+            res = a || b;
+        else if(mode == 3)
+            res = a == b;
+        else if(mode == 4)
+        {
+            res = !a;
+            res2 = !b;
+        }   
+        cout << "your result is: " << endl;
+        if (res == true)
+            cout << "Result is True"<< endl;
+        else 
+            cout << "Result is False"<< endl;
+            
+        if (mode == 4)
+        {
+            if (res == true)
+                cout << "Result is True"<< endl;
+            else 
+                cout << "Result is False"<< endl;
+        }    
+        
+    return 0;
+}
