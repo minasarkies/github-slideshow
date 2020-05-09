@@ -1,11 +1,11 @@
-#include <iostream>
+#include <iostream> // simple declatation of required libraries
 #include <cmath>
 #include <string>
 using namespace std;
 
 int main()
 {
-    bool a,b,res,res2;
+    bool a,b,res,res2; // Declatation of variables required
     int mode,c,d;
   
         cout <<"enter the operation required(1:and, 2:or, 3:compare, 4:not  ) :" <<endl;
@@ -14,11 +14,11 @@ int main()
         cout <<"enter the boolean values one after the other (1:true, 2:false): " <<endl;
         cin >> c >> d;
         
-        if (c == 1)
+        if (c == 1) // conversion from int to bool (since the user cannot input a boolean value)
             a = true;
         else if (c == 2)
             a = false;
-        else
+        else // simple error handling
         {
             cout << "Error: input invalid";
             exit (EXIT_FAILURE);
@@ -33,7 +33,8 @@ int main()
             cout << "Error: input invalid";
             exit (EXIT_FAILURE);
         }
-        if(mode == 1)
+		
+        if(mode == 1) // The actual computations of the logical values
             res = a && b;
         else if(mode == 2)
             res = a || b;
@@ -44,7 +45,7 @@ int main()
             res = !a;
             res2 = !b;
         }   
-        cout << "your result is: " << endl;
+        cout << "your result is: " << endl; // finally displaying the result
         if (res == true)
             cout << "Result is True"<< endl;
         else 
